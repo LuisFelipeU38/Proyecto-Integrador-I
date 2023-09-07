@@ -1,1 +1,11 @@
-
+User Stories:
+1.	As a user, I want to be able to register on the website to access its features.
+2.	As a user, I want to be able to log in to the website with my username and password to access exclusive features.
+3.	As a user, I want to receive a confirmation email after logging in or registering on the website to verify my successful login.
+4.	As a user, I want to be able to view an informative dashboard on the website that shows me relevant news, events, and updates related to football academies.
+5.	As a user, I want to have the ability to record and update my personal information in my profile, such as my address, contact number, and relevant details.
+6.	As a player user, I want to be able to view my personal data, including my name, age, position, etc., in my profile.
+7.	As a coach user, I want to be able to enroll player users in sports events, providing relevant information about the event and selecting participating players.
+8.	As a coach user, I want to have the ability to edit the statistics of player users, such as goals scored, assists, yellow cards, red cards, etc., to maintain an accurate record of their performance.
+9.	As a coach user, I want to be able to create sports events, providing details such as date, time, location, and event rules, so that player users can register.
+10.	As an administrator user, I want to have the ability to update the payment status of player users, marking whether they have made their respective payments or if they have pending payments.
