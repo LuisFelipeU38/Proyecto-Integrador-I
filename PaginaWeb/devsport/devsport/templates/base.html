@@ -1,35 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1D04CF;">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}">
-                    {% load static %}
-                    <img src="https://sortitoutsi.b-cdn.net/uploads/team/2000185403.png"  width="60" height="80"
-                    class="d-inline-block align-text-top" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" arialabel="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="#">Accede</a>
-                        <a class="nav-link" href="#">Nosotros</a>
-                        <a class="nav-link" href="#">Contacto</a>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-sm" style="background-color: #1D04CF;">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                {% load static %}
+                <img src="https://sortitoutsi.b-cdn.net/uploads/team/2000185403.png"  width="60" height="80"
+                class="d-inline-block align-text-top" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="{% url 'register' %}">
+                        <button class="btn btn-primary btn-sm">Registro</button>
+                    </a>
+                    <a class="nav-link" href="#">Accede</a>
+                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#">Contacto</a>
                 </div>
             </div>
-        </nav>
-           <div class="container">
-                {% block content %}
-                {% endblock content %}
-           </div>
-         </div>
-        </footer>
-    </body>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <!-- Tu contenido adicional aquí -->
+    <footer>
+        <!-- Pie de página -->
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR0tGOuHlIfvxcXuP4p3zcJS3o9w3c3g5qPMw6s2h" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-biJZAg3O6Pf5Zz2G9Gzlo0J3Kxl/r3I5p/hK"></script>
+</body>
 </html>

@@ -24,6 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',talentosViews.home,name='home'),
     path('talentos/', talentosViews.about),
+    path("register", talentosViews.register_request, name="register"),
+    path("login", talentosViews.login_request, name="login"),
+
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
