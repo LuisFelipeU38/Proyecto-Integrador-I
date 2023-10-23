@@ -1,0 +1,70 @@
+/* Estilo para imágenes personalizadas */
+.imagen-personalizada {
+    width: 100px; /* Define el ancho que desees */
+    height: 100px; /* Define el alto que desees */
+}
+.custom-btn {
+    width: auto;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    border: 1px solid #000000; /* Borde negro */
+}
+
+.custom-btn:hover {
+    background-color: #000000; /* Fondo negro al pasar el cursor */
+    color: #ffffff; /* Texto blanco al pasar el cursor */
+}
+/* Estilos generales del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Estilos para las secciones dentro del footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para el pie de página inferior */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+}
+
+.containerpy5 {
+    max-width: 400px;
+}
+
+.registro {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

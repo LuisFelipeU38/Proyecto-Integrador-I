@@ -4,12 +4,12 @@
 
 
 <!--Login--> 
-<div class="container py-5">
+<div class="container py-5 containerpy5">
   <h1>Login</h1>
   <form method="POST">
     {% csrf_token %}
     {{ login_form }}
-    <button class="btn btn-primary" type="submit">Login</button>
+    <button class="btn custom-btn btn-sm button-container" type="submit">Login</button>
   </form>
   <p class="text-center">¿No tienes una cuenta? <a href="/register">Registrate en Talentos Envigado</a>.</p>
 </div>
