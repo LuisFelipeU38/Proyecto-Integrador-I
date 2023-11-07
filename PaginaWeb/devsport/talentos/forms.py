@@ -1,12 +1,12 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from talentos.models import CustomUser  # Importa el modelo de usuario personalizado
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     class Meta:
-        model = User
+        model = CustomUser  # Usa el modelo de usuario personalizado
         fields = ('username', 'email', 'password1', 'password2')
         labels = {
             'username': 'Nombre de usuario',
@@ -21,3 +21,4 @@ class NewUserForm(UserCreationForm):
         if commit:
             user.save()
         return user
+

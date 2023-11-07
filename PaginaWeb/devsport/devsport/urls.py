@@ -24,10 +24,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',talentosViews.home,name='home'),
     path('talentos/', talentosViews.about, name ="about"),
-    path("register", talentosViews.register_request, name="register"),
-    path("login", talentosViews.login_request, name="login"),
-
-
+    path('about/', talentosViews.about, name='about'),
+    path('register/', talentosViews.register_request, name='register'),
+    path('login/', talentosViews.login_request, name='login'),
+    path('jugador/', talentosViews.vista_jugador, name='vista_jugador'),
+    path('entrenador/', talentosViews.vista_entrenador, name='vista_entrenador'),
+    path('vadmin/', talentosViews.vista_admin, name='vista_admin'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

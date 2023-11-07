@@ -127,8 +127,11 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
  os.path.join(BASE_DIR, "static"),
- 'devsport/static/',
+ 'static/',
 ]
+
+AUTH_USER_MODEL = 'talentos.CustomUser'  # Reemplaza 'tu_app' con el nombre de tu aplicación
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
