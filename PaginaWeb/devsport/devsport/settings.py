@@ -132,6 +132,7 @@ STATICFILES_DIRS = [
 
 AUTH_USER_MODEL = 'talentos.CustomUser'  # Reemplaza 'tu_app' con el nombre de tu aplicación
 
+LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

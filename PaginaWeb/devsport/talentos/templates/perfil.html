@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="profile-section">
+    <h1>Mi perfil</h1>
+    <div class="profile-details">
+      <p><strong>Nombre:</strong> {{ user.nombre }}</p>
+      <p><strong>Apellidos:</strong> {{ user.apellidos }}</p>
+      <p><strong>Usuario:</strong> {{ user.username }}</p>
+      <p><strong>Categoría:</strong> {{ user.jugador.categoria }}</p>
+      <p><strong>Peso:</strong> {{ user.jugador.peso }} kg</p>
+      <p><strong>Estatura:</strong> {{ user.jugador.estatura }} m</p>
+      <p><strong>Fecha de nacimiento:</strong> {{ user.jugador.fecha_nacimiento }}</p>
+      <p><strong>Posición:</strong> {{ user.jugador.posicion }}</p>
+    </div>
+  </div>
+{% endblock %}

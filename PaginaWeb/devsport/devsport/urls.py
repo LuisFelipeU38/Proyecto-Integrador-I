@@ -19,6 +19,7 @@ from django.urls import path, include
 from talentos import views as talentosViews
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +30,10 @@ urlpatterns = [
     path('login/', talentosViews.login_request, name='login'),
     path('jugador/', talentosViews.vista_jugador, name='vista_jugador'),
     path('entrenador/', talentosViews.vista_entrenador, name='vista_entrenador'),
-    path('vadmin/', talentosViews.vista_admin, name='vista_admin'),
+    path('vadmin/', talentosViews.vista_admin, name='vista_admin'), 
+    path('perfil/', talentosViews.perfil, name='perfil'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('admin/', talentosViews.vista_admin, name='admin'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,9 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ejemplo de una palabra</title>
-</head>
-<body>
-    <h1>Hola Entrenador</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5 containerpy5">
+  <h1>Búsqueda de Jugadores</h1>
+  <form method="get">
+    {% csrf_token %}
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos">
+    <button class="btn custom-btn btn-sm button-container" type="submit">Buscar</button>
+  </form>
+  </form>
+</div>
+
+<div class="container py-5 containerpy5">
+  <h2>Resultados de la Búsqueda</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Categoría</th>
+        <th>Peso</th>
+        <th>Estatura</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Posición</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for jugador in jugadores %}
+      <tr>
+        <td>{{ jugador.nombre }}</td>
+        <td>{{ jugador.apellidos }}</td>
+        <td>{{ jugador.get_categoria_display }}</td>
+        <td>{{ jugador.peso }}</td>
+        <td>{{ jugador.estatura }}</td>
+        <td>{{ jugador.fecha_nacimiento }}</td>
+        <td>{{ jugador.posicion }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7">No se encontraron jugadores que coincidan con los criterios de búsqueda.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+

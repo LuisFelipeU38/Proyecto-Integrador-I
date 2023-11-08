@@ -5,11 +5,14 @@
 
 <!--Login--> 
 <div class="container py-5 containerpy5">
-  <h1>Login</h1>
+  <h1>Ingreso</h1>
   <form method="POST">
     {% csrf_token %}
-    {{ login_form }}
-    <button class="btn custom-btn btn-sm button-container" type="submit">Login</button>
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password">
+    <button class="btn custom-btn btn-sm button-container" type="submit">Ingreso</button>
   </form>
   <p class="text-center">¿No tienes una cuenta? <a href="/register">Registrate en Talentos Envigado</a>.</p>
 </div>

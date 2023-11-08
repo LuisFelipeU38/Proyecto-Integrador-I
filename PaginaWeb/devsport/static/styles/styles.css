@@ -15,7 +15,7 @@
     color: #ffffff; /* Texto blanco al pasar el cursor */
 }
 /* Estilos generales del footer */
-footer {
+.footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
@@ -68,3 +68,31 @@ footer {
     align-items: center;
 }
 
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #007BFF; /* Color de fondo del ícono */
+    color: #fff; /* Color del texto en el ícono */
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.user-info {
+    margin-left: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-action {
+    display: block;
+    margin-top: 5px;
+}

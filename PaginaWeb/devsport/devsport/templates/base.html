@@ -22,6 +22,34 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                    {% if user.user_type == 'entrenador' %}
+                        <form action="{% url 'vista_entrenador' %}" method="get">
+                            <button type="submit">Busqueda de jugadores</button>
+                        </form>
+                    {% elif user.user_type == 'jugador' %}
+                        <form action="{% url 'vista_jugador' %}" method="get">
+                            <button type="submit"></button>
+                        </form>
+                    {% elif user.user_type == 'admin' %}
+                        <form action="{% url 'admin' %}" method="get">
+                            <button type="submit">Base de datos</button>
+                        </form>
+                        <form action="{% url 'vista_admin' %}" method="get">
+                            <button type="submit">Busqueda de juagdores</button>
+                        </form>
+                    {% endif %}
+                    <div class="user-profile">
+                        <a href="{% url 'perfil' %}">
+                            <div class="user-avatar">{{ user.first_name.0 }}{{ user.last_name.0 }}</div>
+                            <div class="user-info">
+                                <span class="user-name">{{ user.first_name }} {{ user.last_name }}</span>
+                            </div>
+                        </a>
+                        <a href="{% url 'perfil' %}" class="user-action">Ver perfil</a>
+                        <a href="{% url 'logout' %}" class="user-action">Cerrar sesión</a>
+                    </div>
+                    {% else %}
                     <a class="nav-link" href="{% url 'login' %}"">
                         <button class="btn custom-btn btn-sm">Ingreso</button>
                     </a>
@@ -30,7 +58,8 @@
                     </a>
                     <a class="nav-link" href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02">
                         <button class="btn custom-btn btn-sm">Nosotros</button>
-                    </a>                                    
+                    </a>    
+                    {% endif %}                                
                 </div>
             </div>
         </div>
@@ -62,7 +91,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2023 Tu Sitio Web
+            &copy; 2023 TalentosEnvigado
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR0tGOuHlIfvxcXuP4p3zcJS3o9w3c3g5qPMw6s2h" crossorigin="anonymous"></script>
